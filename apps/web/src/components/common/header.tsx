@@ -54,10 +54,10 @@ export function Header() {
             </div>
             <div>
               <span className="font-heading font-bold text-lg tracking-tight text-obsidian block leading-tight">
-                KINETIK
+                CONNECT
               </span>
               <span className="font-mono text-[10px] tracking-widest text-medium-gray uppercase block">
-                SYSTEMS
+                SOFTWARE DEVELOPMENT
               </span>
             </div>
           </button>

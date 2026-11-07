@@ -22,10 +22,10 @@ export function HeroSection() {
         <div className="flex items-center gap-3 mb-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-light-bg border border-border-gray text-xs font-mono uppercase tracking-wider text-dark-gray rounded-subtle">
             <span className="w-2 h-2 rounded-full bg-obsidian inline-block" />
-            <span>Industrial Grade Software Architecture</span>
+            <span>Industrial Grade Software Development</span>
           </div>
           <span className="font-mono text-xs text-medium-gray hidden sm:inline">
-            // SOC2 & ISO 27001 COMPLIANT
+            // CONNECT SOFTWARE DEVELOPMENT //
           </span>
         </div>
 
@@ -36,7 +36,7 @@ export function HeroSection() {
               Engineering Precise Software Solutions.
             </h1>
             <p className="text-lg sm:text-xl text-dark-gray leading-relaxed max-w-2xl font-normal">
-              Kami merancang dan membangun platform terdistribusi, sistem inti transaksional (*core systems*), dan arsitektur *cloud-native* berdaya tahan tinggi untuk industri skala menengah di Asia Tenggara.
+              Kami merancang dan membangun platform terdistribusi, sistem inti transaksional (<b>core systems</b>), dan arsitektur <b>cloud-native</b> berdaya tahan tinggi untuk industri skala menengah di Indonesia.
             </p>
           </div>
 
