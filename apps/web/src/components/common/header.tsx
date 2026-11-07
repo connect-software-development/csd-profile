@@ -18,6 +18,7 @@ export function Header() {
   }, [])
 
   const navLinks = [
+    { label: 'Tentang Kami', href: '#about' },
     { label: 'Layanan', href: '#services' },
     { label: 'Studi Kasus', href: '#case-studies' },
     { label: 'Arsitektur & Tech', href: '#architecture' },
@@ -49,9 +50,11 @@ export function Header() {
             }}
             className="flex items-center gap-3 text-left group"
           >
-            <div className="w-8 h-8 bg-obsidian flex items-center justify-center rounded-subtle text-white font-mono font-bold text-sm tracking-tighter group-hover:bg-dark-gray transition-colors">
-              K/
-            </div>
+            <img
+              src="/Connect Logo.jpg"
+              alt="Connect Software Development Logo"
+              className="h-9 w-auto max-h-9 object-contain rounded-subtle border border-border-gray/60"
+            />
             <div>
               <span className="font-heading font-bold text-lg tracking-tight text-obsidian block leading-tight">
                 CONNECT

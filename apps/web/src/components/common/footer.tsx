@@ -13,15 +13,17 @@ export function Footer() {
           {/* Column 1: Brand & Philosophy */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-white flex items-center justify-center rounded-subtle text-obsidian font-mono font-bold text-sm">
-                K/
-              </div>
+              <img
+                src="/Connect Logo.jpg"
+                alt="Connect Software Development Logo"
+                className="h-8 w-auto max-h-8 object-contain rounded-subtle bg-white p-0.5"
+              />
               <div>
                 <span className="font-heading font-bold text-lg tracking-tight text-white block leading-tight">
-                  KINETIK
+                  CONNECT
                 </span>
                 <span className="font-mono text-[10px] tracking-widest text-white/50 uppercase block">
-                  SYSTEMS INDONESIA
+                  SOFTWARE DEVELOPMENT
                 </span>
               </div>
             </div>
@@ -129,7 +131,7 @@ export function Footer() {
         {/* Bottom Bar: Copyright & Compliance */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white/50">
           <div>
-            &copy; {new Date().getFullYear()} PT Kinetik Rekayasa Sistem. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Connect Software Development. All Rights Reserved.
           </div>
           <div className="flex items-center gap-6">
             <span className="hover:text-white cursor-pointer">Security Whitepaper</span>

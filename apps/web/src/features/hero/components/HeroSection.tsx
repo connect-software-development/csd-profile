@@ -43,28 +43,33 @@ export function HeroSection() {
           <div className="lg:col-span-4 lg:pt-3 space-y-4">
             <div className="border-l-2 border-obsidian pl-4 space-y-2">
               <div className="font-mono text-xs text-medium-gray uppercase tracking-widest">
-                Target Metrik Klien
+                Dibalik Connect Software Development
               </div>
-              <div className="text-sm font-semibold text-obsidian">
-                99.995% SLA • Sub-30ms Latensi • Arsitektur Zero-Downtime
-              </div>
+              <p className="text-sm font-medium text-obsidian leading-relaxed">
+                Kenali para Principal Architect, Lead Engineer, dan spesialis sistem di balik Connect Software Development. Klik <b>About Us</b> untuk mempelajari rekam jejak dan kapabilitas tim kami.
+              </p>
             </div>
 
             <div className="pt-2 flex flex-col sm:flex-row lg:flex-col gap-3">
               <Button
                 variant="primary"
                 size="md"
-                onClick={() => setContactModalOpen(true)}
+                onClick={() => {
+                  const element = document.getElementById('about')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
                 iconRight={<ArrowRight className="w-4 h-4" />}
               >
-                Inisiasi Konsultasi Teknis
+                About Us
               </Button>
               <Button
                 variant="secondary"
                 size="md"
-                onClick={() => setEstimateModalOpen(true)}
+                onClick={() => setContactModalOpen(true)}
               >
-                Hitung Estimasi Proyek
+                Inisiasi Konsultasi Teknis
               </Button>
             </div>
           </div>
