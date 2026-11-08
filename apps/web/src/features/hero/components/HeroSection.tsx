@@ -8,11 +8,11 @@ export function HeroSection() {
   const { setContactModalOpen, setEstimateModalOpen } = useAppStore()
 
   const trustLogos = [
-    { name: 'BANK NUSANTARA', desc: 'Core Settlement Mesh' },
-    { name: 'LOGISTIK PRIMA', desc: 'Realtime Fleet Dispatch' },
-    { name: 'AGRO ENERGI ASIA', desc: 'IoT SCADA Telemetry' },
-    { name: 'MEDIKA HEALTHCARE', desc: 'HIPAA/FHIR Electronic Records' },
-    { name: 'PAYCONNECT PACIFIC', desc: 'High-Volume Payment Gateway' },
+    { name: 'PT. MARSTECH GLOBAL', desc: 'System Information Internship Management' },
+    { name: 'UNIVERSITAS PGRI MADIUN', desc: 'Chatbot Medical Agentic AI' },
+    { name: 'CLYROVA.ID', desc: 'System Information Management (SIAKAD)' },
+    { name: 'MS HARMONY BUTIK', desc: 'BUTIK MARKETPLACE & COMPANY PROFILE' },
+    { name: 'NABAWI STORE', desc: 'Point Of Sale System' },
   ]
 
   return (
@@ -85,10 +85,10 @@ export function HeroSection() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5 border-b border-border-gray pb-4">
             <div className="font-mono text-xs uppercase tracking-wider text-medium-gray flex items-center gap-2">
               <Shield className="w-3.5 h-3.5 text-obsidian" />
-              <span>Dipercaya Oleh Organisasi Kritis & Industri Skala Menengah</span>
+              <span>Dipercaya Oleh Organisasi & Industri Skala Menengah</span>
             </div>
             <div className="text-xs font-mono text-dark-gray">
-              Total Volume Transaksi Terkelola: <span className="font-bold text-obsidian">&gt; Rp 2.4 Triliun/Bulan</span>
+              Total Kerjasama Client : <span className="font-bold text-obsidian">&gt; 5 Projects</span>
             </div>
           </div>
 
