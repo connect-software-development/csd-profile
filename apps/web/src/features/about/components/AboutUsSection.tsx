@@ -9,22 +9,22 @@ export function AboutUsSection() {
 
   const leaders = [
     {
-      role: 'PRINCIPAL ARCHITECT & FOUNDER',
-      name: 'Aditya Pratama, M.Sc.',
-      bio: 'Eks-Lead Systems Architect di tier-1 financial ecosystem. Spesialisasi dalam sistem kliring terdistribusi, event-driven microservices, dan konsensus transactional.',
-      credentials: 'Ex-Core Banking • 14+ Tahun Rekayasa Sistem',
+      role: 'FOUNDER, President of AI Engineering & Software Engineering',
+      name: 'Jofanza Denis Aldida, S.Kom.',
+      bio: 'Mendirikan Connect Software Development untuk menjembatani kebutuhan teknologi industri skala menengah dengan standar keandalan enterprise global. Bersertifikasi MTCNA dan AI Engineer Specialist.',
+      credentials: 'MTCNA Certified • AI Engineer Specialist • Bangkit Academy 2024 Machine Learning Graduated by Google, GoTo, Traveloka • Ex-Google Student Ambassador 2025 • Ex-AI Engineer & Software Engineer at PT. MARSTECH GLOBAL • 3+ Years Experience',
     },
     {
-      role: 'VP OF CLOUD & DEVOPS INFRASTRUCTURE',
-      name: 'Baskoro Wicaksono',
-      bio: 'Mengawasi arsitektur multi-cloud, Kubernetes mesh, dan keandalan high-availability (SRE). Bersertifikasi CKA & AWS Solutions Architect Professional.',
-      credentials: 'CKA Certified • 99.999% SLA Specialist',
+      role: 'Vice President of Cloud & DevOps Architecture',
+      name: 'Muhammad Toha Ikhsan, S.Kom.',
+      bio: 'Membangun arsitektur sistem, mengawasi implementasi cloud, dan keandalan high-availability (SRE). Bersertifikasi MTCNA dan Cloud Computing Specialist.',
+      credentials: 'MTCNA Certified • Cloud Computing Specialist • Bangkit Academy 2024 Cloud Computing Graduated by Google, GoTo, Traveloka • Ex-Cloud & DevOps Engineer at PT. MARSTECH GLOBAL • 3+ Years Experience',
     },
     {
-      role: 'HEAD OF ENTERPRISE SECURITY & COMPLIANCE',
-      name: 'Devina Maharani, CISSP',
-      bio: 'Memimpin verifikasi ISO/IEC 27001, audit SOC2 Type II, dan arsitektur Zero-Trust Network Access (ZTNA) untuk kepatuhan regulasi OJK & Bank Indonesia.',
-      credentials: 'CISSP • OJK/BI Sandbox Compliance',
+      role: 'Vice President of Operations & Software Engineering',
+      name: 'Dimas Prayogo, S.Kom.',
+      bio: 'Membangun arsitektur desain interface, mengawasi pengembangan sistem, dan memastikan kualitas kode melalui praktik clean code dan automated testing.',
+      credentials: 'MTCNA Certified • Software Engineering Specialist • Coding Camp 2026 powered by DBS Foundation Graduated • Ex-Software Engineer at PT. MARSTECH GLOBAL • 3+ Years Experience',
     },
     {
       role: 'PRINCIPAL DATA & DISTRIBUTED CORE',
@@ -53,7 +53,7 @@ export function AboutUsSection() {
     {
       no: '04',
       title: 'Jaminan Garansi & Observabilitas SRE',
-      desc: 'Dukungan post-deployment aktif 90 hari dengan setup dashboard telemetri 24/7 dan penanganan insiden sub-15 menit.',
+      desc: 'Dukungan post-deployment aktif 60 hari dengan setup dashboard telemetri 24/7 dan penanganan insiden sub-15 menit.',
     },
   ]
 
