@@ -11,17 +11,34 @@ export function HeroSection() {
     {
       name: "UNIVERSITAS PGRI MADIUN",
       desc: "Chatbot Medical Agentic AI & GraphRAG",
+      href: "#case-studies",
     },
     {
       name: "PT. MARSTECH GLOBAL",
       desc: "SIM-Magang & OCR Ingestion (Nest/Prisma)",
+      href: "#case-studies",
     },
-    { name: "CLYROVA.ID", desc: "SIAKAD High-Concurrency (Gin & Vue)" },
+    {
+      name: "CLYROVA.ID",
+      desc: "SIAKAD Multi-Kampus (Nest & React)",
+      href: "#case-studies",
+    },
     {
       name: "MS HARMONY BUTIK",
-      desc: "Fashion Marketplace & Profile (Next.js)",
+      desc: "Fashion Marketplace (Next & React)",
+      href: "#case-studies",
     },
-    { name: "NABAWI STORE", desc: "Omnichannel POS & Inventory (Svelte/YOLO)" },
+    {
+      name: "NABAWI STORE",
+      desc: "Omnichannel POS (Next & Express)",
+      href: "#case-studies",
+    },
+    {
+      name: "PEMERINTAH DESA KREBET",
+      desc: "Portal Layanan Publik (React & Laravel)",
+      href: "https://desakrebet.my.id/",
+      external: true,
+    },
   ];
 
   return (
@@ -107,15 +124,17 @@ export function HeroSection() {
             </div>
             <div className="text-xs font-mono text-dark-gray">
               Total Kerjasama Client :{" "}
-              <span className="font-bold text-obsidian">&gt; 5 Projects</span>
+              <span className="font-bold text-obsidian">&gt; 6 Projects</span>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
             {trustLogos.map((client) => (
               <a
                 key={client.name}
-                href="#case-studies"
+                href={client.href}
+                target={client.external ? "_blank" : undefined}
+                rel={client.external ? "noopener noreferrer" : undefined}
                 className="p-3 bg-white border border-border-gray rounded-subtle hover:border-obsidian hover:shadow-sm transition-all text-center group cursor-pointer block"
               >
                 <div className="font-mono font-bold text-xs tracking-tight text-obsidian group-hover:text-dark-gray">

@@ -75,11 +75,11 @@ export function CaseStudiesSection() {
       category: 'ACADEMIC INFORMATION SYSTEM (SIAKAD)',
       client: 'CLYROVA.ID',
       projectScope: 'System Information Management (SIAKAD Multi-Kampus)',
-      title: 'High-Concurrency SIAKAD Core Platform: Gin Golang + Laravel + MySQL + Vue.js',
+      title: 'High-Concurrency SIAKAD Core Platform: Nest.js + React.js + PostgreSQL',
       problem:
         'Lonjakan ribuan mahasiswa yang mengakses portal akademik secara serentak pada periode pengisian Kartu Rencana Studi (KRS) massal sering memicu kegagalan database lock dan downtime sistem.',
       solution:
-        'Connect merancang pemisahan layanan: engine transaksi antrean KRS berkecepatan tinggi menggunakan Gin (Golang) dan Knex.js query optimization, dipadukan sistem administrasi kurikulum berbasis Laravel (PHP) & MySQL, serta frontend Vue.js / Nuxt.js yang ringan dan ramah bandwidth.',
+        'Connect merancang platform SIAKAD terdistribusi: arsitektur modular backend berbasis Nest.js (TypeScript) dengan basis data relasional PostgreSQL berkecepatan tinggi teroptimasi query indexing dan connection pooling, dipadukan antarmuka responsif modern berbasis React.js.',
       primaryMetric: {
         value: '99.98%',
         label: 'Uptime SLA Saat Periode Puncak KRS',
@@ -93,23 +93,23 @@ export function CaseStudiesSection() {
         label: 'Mahasiswa & Dosen Terlayani Aktif',
       },
       architecturePoints: [
-        'Engine konkurensi Go routine & Gin (Golang) berkecepatan tinggi menangani lonjakan transaksi KRS tanpa antrean macet',
-        'Modul manajemen akademik dan kurikulum terintegrasi Laravel (PHP) dengan cluster database MySQL teroptimasi',
-        'Antarmuka Single Page Application (SPA) / SSR berbasis Vue.js dan Nuxt.js dengan kecepatan render optimal',
+        'Arsitektur enterprise backend modular Nest.js & TypeScript dengan performa throughput tinggi',
+        'Optimasi konkurensi PostgreSQL dengan connection pooling & indexing untuk beban transaksi KRS massal',
+        'Antarmuka Single Page Application (SPA) berbasis React.js yang responsif dan interaktif',
         'Automated delivery via Docker container dengan orkestrasi di Google Cloud Platform (GCP)',
       ],
-      techTags: ['Gin (Golang)', 'Laravel (PHP)', 'MySQL', 'Knex.js', 'Vue.js', 'Nuxt.js', 'Docker', 'GitHub Actions', 'Google Cloud Platform'],
+      techTags: ['Nest.js', 'React.js', 'PostgreSQL', 'TypeScript', 'Docker', 'GitHub Actions', 'Google Cloud Platform'],
     },
     {
       id: 'harmony-nabawi-omnichannel',
       category: 'OMNICHANNEL POS & FASHION COMMERCE',
       client: 'MS HARMONY BUTIK & NABAWI STORE',
       projectScope: 'Butik Marketplace, Company Profile & Omnichannel POS System',
-      title: 'Omnichannel POS, Inventory Sync & Visual Marketplace: YOLO + Svelte.js + Next.js',
+      title: 'Omnichannel POS, Inventory Sync & Visual Marketplace: Next.js + React.js + Express.js + Prisma + MySQL',
       problem:
         'Discrepancy stok antara kasir toko fisik offline dengan katalog marketplace online butik memicu pembatalan order konsumen dan proses input foto katalog produk baru yang lambat.',
       solution:
-        'Connect membangun solusi omnichannel terpadu: kasir Point Of Sale (POS) ultra-ringan berbasis Svelte.js dengan offline cache, platform e-commerce & Company Profile elegan berbasis Next.js, sinkronisasi inventaris multi-outlet real-time via Node.js / Express.js & PostgreSQL Prisma, serta model YOLO untuk deteksi visual atribut produk.',
+        'Connect membangun solusi omnichannel terpadu: sistem kasir Point Of Sale (POS) responsif berbasis React.js, platform marketplace & Company Profile modern berbasis Next.js, sinkronisasi inventaris multi-outlet real-time via Express.js, serta basis data MySQL yang dikelola secara type-safe melalui Prisma ORM.',
       primaryMetric: {
         value: '100%',
         label: 'Akurasi Sinkronisasi Stok Fisik vs Online',
@@ -123,12 +123,43 @@ export function CaseStudiesSection() {
         label: 'Gross Merchandise Value (GMV) / Kuartal',
       },
       architecturePoints: [
-        'Point of Sale (POS) ultra-ringan berbasis Svelte.js dengan dukungan transaksi kasir offline-first',
-        'Katalog fashion marketplace dan Company Profile elegan dengan arsitektur modern Next.js / React.js di Vercel',
-        'Model Computer Vision YOLO (Object Detection) untuk kategorisasi dan visual tagging atribut pakaian otomatis',
-        'Sinkronisasi inventaris multi-cabang real-time berbasis Node.js / Express.js dengan PostgreSQL via Prisma ORM',
+        'Point of Sale (POS) kasir responsif berbasis React.js dengan transaksi cepat dan sinkronisasi instan',
+        'Katalog fashion marketplace dan Company Profile modern berbasis Next.js / React.js',
+        'Sinkronisasi inventaris multi-cabang real-time berbasis Express.js',
+        'Basis data MySQL dengan skema relasional terstruktur via Prisma ORM',
       ],
-      techTags: ['YOLO (Object Detection)', 'Next.js', 'Svelte.js', 'Node.js / Express.js', 'PostgreSQL', 'Prisma', 'Docker', 'Vercel', 'Google Cloud Platform'],
+      techTags: ['Next.js', 'React.js', 'Express.js', 'Prisma', 'MySQL', 'TypeScript', 'Docker', 'Google Cloud Platform'],
+    },
+    {
+      id: 'desa-krebet-portal',
+      category: 'CIVIC TECH & DIGITAL PUBLIC SERVICE',
+      client: 'PEMERINTAH DESA KREBET',
+      projectScope: 'Sistem Informasi Desa & Portal Layanan Publik Terpadu',
+      title: 'Portal Layanan Warga & Sistem Informasi Desa: React.js + Laravel + MySQL',
+      externalUrl: 'https://desakrebet.my.id/',
+      problem:
+        'Layanan administrasi persuratan warga, publikasi transparansi anggaran, direktori UMKM lokal, dan penyampaian aspirasi masyarakat sebelumnya membutuhkan kehadiran fisik di Balai Desa dengan proses manual yang memakan waktu.',
+      solution:
+        'Connect merancang dan mengimplementasikan portal resmi Desa Krebet (https://desakrebet.my.id/) dengan antarmuka dinamis modern berbasis React.js, backend manajemen layanan surat mandiri dan administrasi publik berbasis Laravel (PHP), serta basis data relasional MySQL teroptimasi.',
+      primaryMetric: {
+        value: '100%',
+        label: 'Digitalisasi Layanan Persuratan Warga',
+      },
+      secondaryMetric: {
+        value: '< 0.7 dtk',
+        label: 'Waktu Muat Laman Portal',
+      },
+      thirdMetric: {
+        value: '4,500+',
+        label: 'Warga & Pelaku UMKM Desa Terfasilitasi',
+      },
+      architecturePoints: [
+        'Antarmuka portal publik interaktif dan modern berbasis React.js yang ramah konektivitas seluler',
+        'Backend arsitektur MVC teruji berbasis Laravel (PHP) untuk otomasi alur kerja administrasi desa',
+        'Basis data relasional MySQL untuk pengelolaan arsip kependudukan dan permohonan surat warga',
+        'Sistem permohonan surat mandiri dengan pelacakan status permohonan real-time',
+      ],
+      techTags: ['React.js', 'Laravel', 'MySQL', 'PHP', 'JavaScript', 'Tailwind CSS', 'Docker'],
     },
   ]
 
@@ -156,7 +187,7 @@ export function CaseStudiesSection() {
         </div>
 
         {/* Case Selector Tabs matching Trust Bar Clients */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-10">
           {studies.map((item, idx) => (
             <button
               key={item.id}
@@ -197,8 +228,19 @@ export function CaseStudiesSection() {
                 <h3 className="text-2xl sm:text-3xl font-bold font-heading text-white tracking-tight leading-snug">
                   {current.title}
                 </h3>
-                <div className="font-mono text-xs text-white/60 mt-1">
-                  Scope: {current.projectScope}
+                <div className="flex flex-wrap items-center gap-3 font-mono text-xs text-white/60 mt-1">
+                  <span>Scope: {current.projectScope}</span>
+                  {'externalUrl' in current && current.externalUrl && (
+                    <a
+                      href={current.externalUrl as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 underline"
+                    >
+                      <span>{current.externalUrl as string}</span>
+                      <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -285,7 +327,18 @@ export function CaseStudiesSection() {
               </div>
 
               {/* Direct Inquiry CTA */}
-              <div className="pt-4">
+              <div className="pt-4 flex flex-col gap-2.5">
+                {'externalUrl' in current && current.externalUrl && (
+                  <a
+                    href={current.externalUrl as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-2.5 px-4 bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs uppercase tracking-wider font-bold rounded-subtle hover:bg-emerald-500/25 transition-colors flex items-center justify-center gap-2"
+                  >
+                    <span>Kunjungi Web Resmi Desa</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                )}
                 <button
                   onClick={() => setContactModalOpen(true)}
                   className="w-full py-3 px-5 bg-white text-obsidian font-mono text-xs uppercase tracking-wider font-bold rounded-subtle hover:bg-border-gray transition-colors flex items-center justify-center gap-2"

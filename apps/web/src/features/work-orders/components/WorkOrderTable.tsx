@@ -10,18 +10,18 @@ export function WorkOrderTable() {
       <div className="p-4 sm:p-5 border-b border-border-gray flex flex-wrap items-center justify-between gap-4 bg-light-bg">
         <div>
           <span className="font-mono text-xs uppercase tracking-widest text-medium-gray block">
-            // LIVE INDUSTRIAL TELEMETRY
+            // LIVE CLIENT SPRINT &amp; DELIVERY QUEUE
           </span>
           <h4 className="text-base font-bold text-obsidian tracking-tight">
-            Work Orders & Maintenance Queue
+            Engineering Work Orders &amp; Deployment Sprints
           </h4>
         </div>
         <div className="flex items-center gap-2">
           <button className="px-3 py-1.5 border border-border-gray rounded-subtle text-xs font-mono bg-white flex items-center gap-1.5 text-obsidian hover:border-obsidian">
-            <Filter className="w-3.5 h-3.5" /> Filter
+            <Filter className="w-3.5 h-3.5" /> Filter Status
           </button>
           <button className="px-3 py-1.5 bg-obsidian text-white rounded-subtle text-xs font-mono flex items-center gap-1.5 hover:bg-dark-gray">
-            <Plus className="w-3.5 h-3.5" /> Buat WO Baru
+            <Plus className="w-3.5 h-3.5" /> Tiket Baru
           </button>
         </div>
       </div>
@@ -32,11 +32,11 @@ export function WorkOrderTable() {
             <tr>
               <th className="py-3 px-4">WO Code</th>
               <th className="py-3 px-4">Deskripsi Tugas</th>
-              <th className="py-3 px-4">Aset Terkait</th>
-              <th className="py-3 px-4">Penanggung Jawab</th>
+              <th className="py-3 px-4">Klien &amp; Sistem Terkait</th>
+              <th className="py-3 px-4">Lead Engineer</th>
               <th className="py-3 px-4">Prioritas</th>
               <th className="py-3 px-4">Status</th>
-              <th className="py-3 px-4 text-right">Jadwal Selesai</th>
+              <th className="py-3 px-4 text-right">Target Rilis</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border-gray font-sans">
