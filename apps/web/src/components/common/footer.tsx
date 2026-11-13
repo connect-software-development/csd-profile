@@ -1,9 +1,9 @@
-import { ArrowUpRight, ShieldCheck, Mail, MapPin, Phone } from 'lucide-react'
-import { Container } from './container'
-import { useAppStore } from '@/stores/useAppStore'
+import { ArrowUpRight, ShieldCheck, Mail, MapPin, Phone } from "lucide-react";
+import { Container } from "./container";
+import { useAppStore } from "@/stores/useAppStore";
 
 export function Footer() {
-  const { setContactModalOpen } = useAppStore()
+  const { setContactModalOpen } = useAppStore();
 
   return (
     <footer className="bg-obsidian text-white border-t border-white/10 pt-16 sm:pt-20 pb-12">
@@ -28,7 +28,10 @@ export function Footer() {
               </div>
             </div>
             <p className="text-xs text-white/70 leading-relaxed max-w-sm">
-              Rekayasa perangkat lunak presisi tinggi, modernisasi sistem warisan (*legacy*), dan arsitektur *cloud-native* untuk industri berskala menengah di Asia Tenggara.
+              Rekayasa perangkat lunak presisi tinggi, modernisasi sistem
+              warisan <b>legacy</b>, dan arsitektur <b>cloud-native</b> dan{" "}
+              <b>microservices</b> untuk industri berskala menengah di Asia
+              Tenggara.
             </p>
             <div className="pt-2 flex items-center gap-2 text-xs font-mono text-white/60">
               <ShieldCheck className="w-4 h-4 text-white" />
@@ -43,27 +46,42 @@ export function Footer() {
             </div>
             <ul className="space-y-2 text-xs text-white/80">
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="hover:text-white transition-colors"
+                >
                   01. Custom Enterprise Platforms
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  02. Cloud Migration & Kubernetes Mesh
+                <a
+                  href="#services"
+                  className="hover:text-white transition-colors"
+                >
+                  02. Cloud Migration & Kubernetes
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="hover:text-white transition-colors"
+                >
                   03. High-Throughput Event Streaming
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="hover:text-white transition-colors"
+                >
                   04. Data Pipeline & Machine Learning
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="hover:text-white transition-colors"
+                >
                   05. Legacy Modernization & Microservices
                 </a>
               </li>
@@ -78,18 +96,19 @@ export function Footer() {
             <div className="space-y-3 text-xs text-white/70">
               <div>
                 <div className="text-white font-medium flex items-center gap-1.5 mb-1">
-                  <MapPin className="w-3.5 h-3.5" /> Jakarta R&D Center
+                  <MapPin className="w-3.5 h-3.5" /> Madiun Regency, East Java,
+                  Indonesia
                 </div>
                 <p className="text-white/60 leading-relaxed">
-                  Menara Sentraya Lt. 24, Jl. Iskandarsyah Raya No. 1A, Kebayoran Baru, Jakarta Selatan 12160
+                  Remote - Based in Madiun Regency, East Java, Indonesia
                 </p>
               </div>
               <div className="pt-2">
                 <div className="text-white font-medium flex items-center gap-1.5 mb-1">
-                  <MapPin className="w-3.5 h-3.5" /> Singapore Engineering Hub
+                  <MapPin className="w-3.5 h-3.5" /> Surabaya
                 </div>
                 <p className="text-white/60 leading-relaxed">
-                  Marina Bay Financial Centre Tower 1, Level 11, Singapore 018981
+                  Remote - Based in Surabaya, East Java, Indonesia
                 </p>
               </div>
             </div>
@@ -101,19 +120,20 @@ export function Footer() {
               // Inisiasi Kerjasama
             </div>
             <p className="text-xs text-white/70 leading-relaxed">
-              Jadwalkan review arsitektur atau diskusi kelayakan teknis bersama Principal Architect kami.
+              Jadwalkan review arsitektur atau diskusi kelayakan teknis bersama
+              Principal Architect kami.
             </p>
             <div className="space-y-2 text-xs font-mono pt-1">
               <a
-                href="mailto:engineering@connectsoftware.dev"
+                href="mailto:connectsoftwaredevelopment@gmail.com"
                 className="flex items-center gap-2 text-white/90 hover:text-white transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 text-white/50" />
-                <span>engineering@connectsoftware.dev</span>
+                <span>connectsoftwaredevelopment@gmail.com</span>
               </a>
               <div className="flex items-center gap-2 text-white/70">
                 <Phone className="w-3.5 h-3.5 text-white/50" />
-                <span>+62 (21) 5088-2940</span>
+                <span>+62 889-9198-4447</span>
               </div>
             </div>
             <div className="pt-3">
@@ -131,15 +151,22 @@ export function Footer() {
         {/* Bottom Bar: Copyright & Compliance */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white/50">
           <div>
-            &copy; {new Date().getFullYear()} Connect Software Development. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Connect Software Development. All
+            Rights Reserved.
           </div>
           <div className="flex items-center gap-6">
-            <span className="hover:text-white cursor-pointer">Security Whitepaper</span>
-            <span className="hover:text-white cursor-pointer">Service Level Agreement</span>
-            <span className="hover:text-white cursor-pointer">Kebijakan Privasi</span>
+            <span className="hover:text-white cursor-pointer">
+              Security Whitepaper
+            </span>
+            <span className="hover:text-white cursor-pointer">
+              Service Level Agreement
+            </span>
+            <span className="hover:text-white cursor-pointer">
+              Kebijakan Privasi
+            </span>
           </div>
         </div>
       </Container>
     </footer>
-  )
+  );
 }
