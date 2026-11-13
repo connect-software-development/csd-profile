@@ -26,11 +26,13 @@ export function LoginPage() {
         </button>
 
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-8 h-8 bg-obsidian text-white flex items-center justify-center font-mono font-bold text-sm rounded-subtle">
-            K/
-          </div>
+          <img
+            src="/Connect Logo.jpg"
+            alt="Connect Logo"
+            className="h-8 w-auto max-h-8 object-contain rounded-subtle border border-border-gray/60"
+          />
           <div>
-            <span className="font-heading font-bold text-lg text-obsidian block">KINETIK SSO</span>
+            <span className="font-heading font-bold text-lg text-obsidian block">CONNECT SSO</span>
             <span className="font-mono text-[10px] text-medium-gray tracking-widest uppercase">
               // ZERO-TRUST PORTAL ACCESS
             </span>

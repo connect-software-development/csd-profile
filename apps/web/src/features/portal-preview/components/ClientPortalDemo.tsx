@@ -68,11 +68,13 @@ export function ClientPortalDemo() {
         <aside className="w-64 border-r border-border-gray bg-white flex flex-col justify-between p-4 hidden md:flex shrink-0">
           <div className="space-y-6">
             <div className="flex items-center gap-3 px-2">
-              <div className="w-7 h-7 bg-obsidian text-white flex items-center justify-center font-mono text-xs font-bold rounded-subtle">
-                K/
-              </div>
+              <img
+                src="/Connect Logo.jpg"
+                alt="Connect Logo"
+                className="h-7 w-auto max-h-7 object-contain rounded-subtle border border-border-gray/60"
+              />
               <div>
-                <div className="font-heading font-bold text-sm text-obsidian">KINETIK CLOUD</div>
+                <div className="font-heading font-bold text-sm text-obsidian">CONNECT CLOUD</div>
                 <div className="font-mono text-[10px] text-medium-gray">ENTERPRISE MES v4.8</div>
               </div>
             </div>

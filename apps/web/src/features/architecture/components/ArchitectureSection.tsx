@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronDown, ChevronUp, Terminal, Shield, GitCommit, RefreshCw } from 'lucide-react'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Container } from '@/components/common/container'
 import { SectionDivider } from '@/components/common/section-divider'
 
@@ -9,93 +9,93 @@ export function ArchitectureSection() {
   const steps = [
     {
       num: '01',
-      phase: 'DISCOVERY & DOMAIN MODELING',
-      title: 'Audit Arsitektur & Event Storming',
+      phase: 'PRAGMATIC DISCOVERY & DOMAIN MODELING',
+      title: 'Discovery Domain & Arsitektur Modular',
       summary:
-        'Kami mengurai domain bisnis Anda menjadi bounded contexts yang terisolasi dengan rapi sebelum satu baris kode pun ditulis.',
+        'Kami memetakan proses bisnis inti dan membedah kebutuhan produk menjadi modul-modul terisolasi (modular monolith atau lean microservices) yang siap tumbuh seiring skala traksi pengguna tanpa over-engineering awal.',
       details: [
-        'Domain-Driven Design (DDD) workshop bersama domain expert & tim engineering klien.',
-        'Pemetaan dependency graph sistem eksisting untuk mengidentifikasi bottleneck dan single point of failure (SPOF).',
-        'Penyusunan Architecture Decision Records (ADR) transparan dengan mitigasi risiko teknis.',
+        'Workshop Domain-Driven Design (DDD) & penyusunan skema MVP hingga target skala menengah.',
+        'Pemodelan basis data relasional (PostgreSQL/MySQL) dengan boundary API yang bersih dan konsisten.',
+        'Penyusunan Architecture Decision Records (ADR) pragmatis untuk mencegah technical debt sejak hari pertama.',
       ],
-      output: 'Architecture Blueprint Document, ADRs, & Data Flow Diagram.',
+      output: 'Modular Architecture Blueprint, Data Schema Model, & Roadmap Rilis.',
     },
     {
       num: '02',
-      phase: 'ARCHITECTURE SPIKES & BENCHMARKING',
-      title: 'Validasi Proof-of-Concept & Stress Testing',
+      phase: 'TYPE-SAFE SPRINTS & CONTRACT TESTING',
+      title: 'Pengembangan Berbasis Kontrak & Tipe Data Ketat',
       summary:
-        'Pengujian empiris batas performa throughput dan latensi pada lingkungan terkontrol sebelum implementasi skala penuh.',
+        'Siklus sprint berkala dengan type-safety menyeluruh dari backend hingga frontend, penulisan kode bersih, dan testing otomatis untuk menjaga stabilitas rilis fitur baru.',
       details: [
-        'Penyusunan stress-test rig menggunakan k6 & Locust untuk mensimulasikan beban 10x di atas peak traffic historis.',
-        'Eksperimen konkurensi database, locking mechanism, dan partition strategy.',
-        'Penetapan Service Level Objectives (SLO) & error budget yang disepakati bersama manajemen.',
+        'Implementasi full type-safety end-to-end (TypeScript, Prisma ORM, OpenAPI/REST, gRPC).',
+        'Automated regression testing untuk memvalidasi alur bisnis kritis dan integritas transaksi finansial/operasional.',
+        'Preview environment otomatis per branch untuk validasi cepat tim produk dan User Acceptance Testing (UAT).',
       ],
-      output: 'Empirical Performance Benchmark Report & Validated Skeleton Code.',
+      output: 'Type-Safe Codebase Repository, OpenAPI Contract Spec, & Automated Test Suite.',
     },
     {
       num: '03',
-      phase: 'TEST-DRIVEN RESILIENT SPRINTS',
-      title: 'Pengembangan Berbasis Kontrak & CI/CD Otomatis',
+      phase: 'LEAN CLOUD & CI/CD PIPELINE',
+      title: 'Kontainerisasi Docker & Automasi CI/CD Efisien',
       summary:
-        'Siklus sprint dua mingguan yang ketat dengan penekanan pada coverage testing otomatis (Unit, Integration, Contract, & E2E).',
+        'Otomasi deployment dari branch Git langsung ke cloud runtime terkelola (GCP, VPS terukur, Vercel) menggunakan GitHub Actions tanpa overhead kluster yang berlebihan.',
       details: [
-        'Semua pull request wajib lolos static analysis (SonarQube/Linter) dan security scan dependensi (Trivy/Snyk).',
-        'Preview environments otomatis per-branch untuk review visual dan user acceptance testing (UAT).',
-        'Dokumentasi OpenAPI / gRPC Protobuf yang selalu tersinkronisasi otomatis.',
+        'Standardisasi lightweight Docker containers untuk portabilitas absolut antara lokal dan produksi.',
+        'Automated CI/CD pipeline (linting, build verification, & automated deployment zero-downtime).',
+        'Proteksi edge network, auto-SSL, dan optimasi CDN menggunakan Cloudflare & Vercel Edge.',
       ],
-      output: 'Deployable Container Artifacts & Automated Regression Test Suites.',
+      output: 'Automated GitHub Actions CI/CD, Container Artifacts, & Zero-Downtime Deployment.',
     },
     {
       num: '04',
-      phase: 'OBSERVABILITY & OPERATIONAL HANDOVER',
-      title: 'Zero-Downtime Rollout & Telemetri 24/7',
+      phase: 'OBSERVABILITY & INTELLECTUAL TRANSFER',
+      title: 'Telemetri Real-Time, Monitoring & 100% Hak Milik Klien',
       summary:
-        'Peluncuran bertahap (Canary) yang diawasi penuh oleh metrik telemetri real-time dengan rollback otomatis jika error budget terlampaui.',
+        'Pemantauan performa aplikasi aktif 24/7, manajemen log terpusat, dan penyerahan aset kode sumber secara lengkap dengan dokumentasi operasional terstruktur.',
       details: [
-        'Setup dashboard Prometheus, Grafana, dan distributed tracing OpenTelemetry.',
-        'Penyusunan Runbook & On-Call Playbook komprehensif untuk tim operasional internal klien.',
-        'Mentorship dan transfer pengetahuan intensif kepada internal developer klien selama fase transisi.',
+        'Setup dashboard telemetri real-time (Prometheus & Grafana) serta logging insiden terpadu.',
+        'Optimasi indeks database, strategi query caching Redis, dan eliminasi bottleneck latensi.',
+        'Transfer 100% hak kekayaan intelektual (source code, blueprint, kredensial cloud) tanpa royalti tersembunyi.',
       ],
-      output: 'Live SRE Dashboards, Operational Runbooks, & Complete IP Transfer.',
+      output: 'Live Telemetry Dashboard, Operational Runbooks, & Complete IP Transfer.',
     },
   ]
 
   const stackCategories = [
     {
-      category: 'Bahasa & Runtime',
+      category: 'Frontend & User Interface',
       items: [
-        { name: 'Golang', role: 'Microservices throughput tinggi & concurrency', mature: true },
-        { name: 'Rust', role: 'Edge processing, IoT MQTT broker, ultra-low latency', mature: true },
-        { name: 'TypeScript', role: 'Frontend apps, BFF API, Next.js / Vite ecosystems', mature: true },
-        { name: 'Python', role: 'AI pipelines, RAG ingestion, data engineering', mature: true },
+        { name: 'Next.js & React', role: 'Full-stack SSR/SSG performa tinggi, SEO teroptimasi, ekosistem industri', mature: true },
+        { name: 'Vue.js & Nuxt', role: 'Antarmuka reaktif ringan, rendering cepat & efisien konsumsi resource', mature: true },
+        { name: 'Svelte.js', role: 'UI kasir POS & dashboard ultra-cepat tanpa virtual DOM overhead', mature: true },
+        { name: 'TypeScript & Tailwind', role: 'Type-safety end-to-end dengan standardisasi desain UI modern', mature: true },
       ],
     },
     {
-      category: 'Infrastruktur & Cloud',
+      category: 'Backend & Core Engine',
       items: [
-        { name: 'Kubernetes (K8s)', role: 'Container orchestration, auto-scaling, self-healing', mature: true },
-        { name: 'Terraform', role: 'Multi-cloud Infrastructure-as-Code (AWS/GCP/Azure)', mature: true },
-        { name: 'Docker', role: 'Standardized build artifacts & lightweight containers', mature: true },
-        { name: 'Cloudflare', role: 'Global edge network, WAF, DDoS mitigation, DNS', mature: true },
+        { name: 'Nest.js (TypeScript)', role: 'Arsitektur modular enterprise untuk core logic bisnis terstruktur', mature: true },
+        { name: 'Gin (Golang)', role: 'Core transaksional berkecepatan tinggi & konkurensi antrean massal', mature: true },
+        { name: 'FastAPI (Python)', role: 'Inference serving AI, GraphRAG retrieval, & pipeline data cepat', mature: true },
+        { name: 'Laravel (PHP)', role: 'Platform stabil & teruji untuk modul administrasi dan manajemen bisnis', mature: true },
       ],
     },
     {
-      category: 'Data & Event Streaming',
+      category: 'Data & Persistence',
       items: [
-        { name: 'PostgreSQL HA', role: 'ACID transactional core dengan streaming replication', mature: true },
-        { name: 'Apache Kafka', role: 'Distributed log, event sourcing, decoupled queues', mature: true },
-        { name: 'ClickHouse', role: 'OLAP data warehouse untuk analitik real-time', mature: true },
-        { name: 'Redis Cluster', role: 'In-memory distributed cache & rate-limiting locks', mature: true },
+        { name: 'PostgreSQL', role: 'Basis data relasional ACID utama dengan integritas transaksional tinggi', mature: true },
+        { name: 'Redis', role: 'In-memory cache super cepat, session management, & background job queue', mature: true },
+        { name: 'MySQL', role: 'Database relasional terpercaya untuk sistem operasional & akademik', mature: true },
+        { name: 'Prisma & Knex.js', role: 'Type-safe ORM & query builder fleksibel untuk manipulasi data aman', mature: true },
       ],
     },
     {
-      category: 'Observabilitas & Keamanan',
+      category: 'DevOps, Cloud & AI',
       items: [
-        { name: 'OpenTelemetry', role: 'Distributed tracing lintas ribuan mikroservis', mature: true },
-        { name: 'Prometheus & Grafana', role: 'Metrics collection, real-time alert triggers', mature: true },
-        { name: 'Vault by HashiCorp', role: 'Centralized secrets management & dynamic credentials', mature: true },
-        { name: 'OAuth2 / OIDC', role: 'Enterprise Single Sign-On (SSO) & fine-grained RBAC', mature: true },
+        { name: 'Docker & GCP', role: 'Kontainerisasi terstandar & cloud hosting terukur hemat biaya', mature: true },
+        { name: 'GitHub Actions', role: 'Automated CI/CD untuk continuous test, build, & zero-downtime deploy', mature: true },
+        { name: 'Cloudflare & Vercel', role: 'Global edge CDN, proteksi WAF, mitigasi DDoS & caching cepat', mature: true },
+        { name: 'Agentic AI & YOLO', role: 'Integrasi LLM RAG, otomasi Computer Vision & pipeline OCR siap pakai', mature: true },
       ],
     },
   ]
@@ -116,7 +116,7 @@ export function ArchitectureSection() {
               </h2>
             </div>
             <p className="text-sm text-dark-gray max-w-md font-normal leading-relaxed">
-              Kualitas perangkat lunak bukan kebetulan; ia adalah hasil dari disiplin arsitektur yang konsisten dan pemilihan teknologi yang matang.
+              Arsitektur pragmatis untuk startup baru menuju menengah: kecepatan rilis tinggi, fondasi kode modular, dan infrastruktur cloud terukur tanpa kompromi keandalan sistem.
             </p>
           </div>
         </div>
@@ -124,7 +124,7 @@ export function ArchitectureSection() {
         {/* 4-Step Accordion / Clean List */}
         <div className="mb-20">
           <div className="font-mono text-xs uppercase tracking-widest text-medium-gray mb-4">
-            // FASE PENGEMBANGAN SISTEM (THE KINETIK PROTOCOL)
+            // FASE PENGEMBANGAN SISTEM (THE CONNECT PROTOCOL)
           </div>
 
           <div className="border-t border-border-gray">

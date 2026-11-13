@@ -1,22 +1,34 @@
-import { ArrowRight, Shield, Cpu, Zap, CheckCircle2 } from 'lucide-react'
-import { Container } from '@/components/common/container'
-import { Button } from '@/components/ui/button'
-import { TechBlueprint } from '@/components/common/tech-blueprint'
-import { useAppStore } from '@/stores/useAppStore'
+import { ArrowRight, Shield, Cpu, Zap, CheckCircle2 } from "lucide-react";
+import { Container } from "@/components/common/container";
+import { Button } from "@/components/ui/button";
+import { TechBlueprint } from "@/components/common/tech-blueprint";
+import { useAppStore } from "@/stores/useAppStore";
 
 export function HeroSection() {
-  const { setContactModalOpen, setEstimateModalOpen } = useAppStore()
+  const { setContactModalOpen } = useAppStore();
 
   const trustLogos = [
-    { name: 'PT. MARSTECH GLOBAL', desc: 'System Information Internship Management' },
-    { name: 'UNIVERSITAS PGRI MADIUN', desc: 'Chatbot Medical Agentic AI' },
-    { name: 'CLYROVA.ID', desc: 'System Information Management (SIAKAD)' },
-    { name: 'MS HARMONY BUTIK', desc: 'BUTIK MARKETPLACE & COMPANY PROFILE' },
-    { name: 'NABAWI STORE', desc: 'Point Of Sale System' },
-  ]
+    {
+      name: "UNIVERSITAS PGRI MADIUN",
+      desc: "Chatbot Medical Agentic AI & GraphRAG",
+    },
+    {
+      name: "PT. MARSTECH GLOBAL",
+      desc: "SIM-Magang & OCR Ingestion (Nest/Prisma)",
+    },
+    { name: "CLYROVA.ID", desc: "SIAKAD High-Concurrency (Gin & Vue)" },
+    {
+      name: "MS HARMONY BUTIK",
+      desc: "Fashion Marketplace & Profile (Next.js)",
+    },
+    { name: "NABAWI STORE", desc: "Omnichannel POS & Inventory (Svelte/YOLO)" },
+  ];
 
   return (
-    <section id="hero" className="pt-28 sm:pt-36 pb-16 sm:pb-24 bg-white bg-grid-pattern relative border-b border-border-gray">
+    <section
+      id="hero"
+      className="pt-28 sm:pt-36 pb-16 sm:pb-24 bg-white bg-grid-pattern relative border-b border-border-gray"
+    >
       <Container>
         {/* Top Tagline / Status Chip */}
         <div className="flex items-center gap-3 mb-6">
@@ -36,7 +48,10 @@ export function HeroSection() {
               Engineering Precise Software Solutions.
             </h1>
             <p className="text-lg sm:text-xl text-dark-gray leading-relaxed max-w-2xl font-normal">
-              Kami merancang dan membangun platform terdistribusi, sistem inti transaksional (<b>core systems</b>), dan arsitektur <b>cloud-native</b> berdaya tahan tinggi untuk industri skala menengah di Indonesia.
+              Kami merancang dan membangun platform terdistribusi, sistem inti
+              transaksional (<b>core systems</b>), dan arsitektur{" "}
+              <b>cloud-native</b> berdaya tahan tinggi untuk industri skala
+              menengah di Indonesia.
             </p>
           </div>
 
@@ -46,7 +61,10 @@ export function HeroSection() {
                 Dibalik Connect Software Development
               </div>
               <p className="text-sm font-medium text-obsidian leading-relaxed">
-                Kenali para Principal Architect, Lead Engineer, dan spesialis sistem di balik Connect Software Development. Klik <b>About Us</b> untuk mempelajari rekam jejak dan kapabilitas tim kami.
+                Kenali para Principal Architect, Lead Engineer, dan spesialis
+                sistem di balik Connect Software Development. Klik{" "}
+                <b>About Us</b> untuk mempelajari rekam jejak dan kapabilitas
+                tim kami.
               </p>
             </div>
 
@@ -55,9 +73,9 @@ export function HeroSection() {
                 variant="primary"
                 size="md"
                 onClick={() => {
-                  const element = document.getElementById('about')
+                  const element = document.getElementById("about");
                   if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' })
+                    element.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
                 iconRight={<ArrowRight className="w-4 h-4" />}
@@ -88,15 +106,17 @@ export function HeroSection() {
               <span>Dipercaya Oleh Organisasi & Industri Skala Menengah</span>
             </div>
             <div className="text-xs font-mono text-dark-gray">
-              Total Kerjasama Client : <span className="font-bold text-obsidian">&gt; 5 Projects</span>
+              Total Kerjasama Client :{" "}
+              <span className="font-bold text-obsidian">&gt; 5 Projects</span>
             </div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {trustLogos.map((client) => (
-              <div
+              <a
                 key={client.name}
-                className="p-3 bg-white border border-border-gray rounded-subtle hover:border-obsidian transition-colors text-center group"
+                href="#case-studies"
+                className="p-3 bg-white border border-border-gray rounded-subtle hover:border-obsidian hover:shadow-sm transition-all text-center group cursor-pointer block"
               >
                 <div className="font-mono font-bold text-xs tracking-tight text-obsidian group-hover:text-dark-gray">
                   {client.name}
@@ -104,11 +124,11 @@ export function HeroSection() {
                 <div className="text-[11px] text-medium-gray mt-0.5 font-mono">
                   {client.desc}
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
       </Container>
     </section>
-  )
+  );
 }

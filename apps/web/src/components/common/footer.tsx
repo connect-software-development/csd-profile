@@ -105,11 +105,11 @@ export function Footer() {
             </p>
             <div className="space-y-2 text-xs font-mono pt-1">
               <a
-                href="mailto:engineering@kinetiksystems.io"
+                href="mailto:engineering@connectsoftware.dev"
                 className="flex items-center gap-2 text-white/90 hover:text-white transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 text-white/50" />
-                <span>engineering@kinetiksystems.io</span>
+                <span>engineering@connectsoftware.dev</span>
               </a>
               <div className="flex items-center gap-2 text-white/70">
                 <Phone className="w-3.5 h-3.5 text-white/50" />

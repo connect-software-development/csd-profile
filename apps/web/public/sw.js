@@ -1,5 +1,5 @@
 // Service worker custom caching
-const CACHE_NAME = 'kinetik-v1'
+const CACHE_NAME = 'connect-v1'
 const ASSETS = [
   '/',
   '/index.html',
